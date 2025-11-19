@@ -1,370 +1,497 @@
-demo site now [mirrored](https://weathered-bread-8229.on.fleek.co/) in [IPFS](https://github.com/ipfs/ipfs#quick-summary)!
+# al-folio
 
-# Jekyll theme: Adam Blog 2.0
-by [Armando Maynez](https://github.com/amaynez) based on [V1.0](https://github.com/artemsheludko/adam-blog) by [Artem Sheludko](https://github.com/artemsheludko). 
+<div align="center">
 
-Adam Blog 2.0 is a Jekyll theme that was built to be 100% compatible with [GitHub Pages](https://pages.github.com/). If you are unfamiliar with GitHub Pages, you can check out [their documentation](https://help.github.com/categories/github-pages-basics/) for more information. [Jonathan McGlone's guide](http://jmcglone.com/guides/github-pages/) on creating and hosting a personal site on GitHub is also a good resource.
+[![Preview](readme_preview/al-folio-preview.png)](https://alshedivat.github.io/al-folio/)
 
-### What is Jekyll?
+**A simple, clean, and responsive [Jekyll](https://jekyllrb.com/) theme for academics.**
 
-Jekyll is a simple, blog-aware, static site generator for personal, project, or organization sites. Basically, Jekyll takes your page content along with template files and produces a complete website. For more information, visit the [official Jekyll site](https://jekyllrb.com/docs/home/) for their documentation. Codecademy also offers a great course on [how to deploy a Jekyll site](https://www.codecademy.com/learn/deploy-a-website) for complete beginners.
-
-### Never Used Jekyll Before?
-
-The beauty of hosting your website on GitHub is that you don't have to actually have Jekyll installed on your computer. Everything can be done through the GitHub code editor, with minimal knowledge of how to use Jekyll or the command line. All you have to do is add your posts to the `_posts` directory and edit the `_config.yml` file to change the site settings. With some rudimentary knowledge of HTML and CSS, you can even modify the site to your liking. This can all be done through the GitHub code editor, which acts like a content management system (CMS).
-
-## Features of v2.0:
-- SEO meta tags
-- Dark mode ([configurable in _config.yml file](https://github.com/the-mvm/the-mvm.github.io/blob/a8d4f781bfbc4107b4842433701d28f5bbf1c520/_config.yml#L10))
-- automatic [sitemap.xml](http://the-mvm.github.io/sitemap.xml)
-- automatic [archive page](http://the-mvm.github.io/archive/) with infinite scrolling capability
-- [new page](https://the-mvm.github.io/tag/?tag=Coding) of posts filtered by a single tag (without needing autopages from paginator V2), also with infinite scrolling
-- click to tweet functionality (just add a `<tweet> </tweet>` tag in your markdown.
-- custom and responsive [404 page](https://the-mvm.github.io/404.html)
-- responsive and automatic Table of Contents (optional per post)
-- read time per post automatically calculated
-- responsive post tags and social share icons (sticky or inline)
-- included linkedin, reddit and bandcamp icons
-- *copy link to clipboard* sharing option (and icon)
-- view on github link button (optional per post)
-- MathJax support (optional per post)
-- tag cloud in the home page
-- 'back to top' button
-- comments 'courtain' to mask the disqus interface until the user clicks on it ([configurable in _config.yml](https://github.com/the-mvm/the-mvm.github.io/blob/d4a67258912e411b639bf5acd470441c4c219544/_config.yml#L13))
-- [CSS variables](https://github.com/the-mvm/the-mvm.github.io/blob/d4a67258912e411b639bf5acd470441c4c219544/assets/css/main.css#L8) to make it easy to customize all colors and fonts
-- added several themes for code syntax highlight [configurable from the _config.yml file](https://github.com/the-mvm/the-mvm.github.io/blob/e146070e9348c2e8f46cb90e3f0c6eb7b59c041a/_config.yml#L44).
-- responsive footer menu and footer logo ([if setup in the config file](https://github.com/the-mvm/the-mvm.github.io/blob/d4a67258912e411b639bf5acd470441c4c219544/_config.yml#L7))
-- search shows results based on full post content, not just the description
-- smoother menu animations 
-
-## Features preserved from v1.0
-- [Google Fonts](https://fonts.google.com/)
-- [Font Awesome icons](http://fontawesome.io/)
-- [Disqus](https://disqus.com/)
-- [MailChimp](https://mailchimp.com/)
-- [Analytics](https://analytics.google.com/analytics/web/)
-- [Search](https://github.com/christian-fei/Simple-Jekyll-Search)
-
-## Demo
-
-[Check the theme in action](https://the-mvm.github.io/)
-
-The main page looks like this:
-
-<img width="640px" src="https://github.com/the-mvm/the-mvm.github.io/blob/main/assets/img/template_screenshots/homepage-responsive.jpg?raw=true">
-
-Dark mode selector in main menu:
-
-<img width="560px" src="https://github.com/the-mvm/the-mvm.github.io/blob/main/assets/img/template_screenshots/light-toggle.png?raw=true">
-
-The post page looks like:
-
-<img width="540px" src="https://github.com/the-mvm/the-mvm.github.io/blob/main/assets/img/template_screenshots/post.jpg?raw=true">
-<img width="540px" src="https://github.com/the-mvm/the-mvm.github.io/blob/main/assets/img/template_screenshots/post_bottom.jpg?raw=true">
-
-Custom responsive 404:
-
-<img width="640px" src="https://github.com/the-mvm/the-mvm.github.io/blob/main/assets/img/template_screenshots/404-responsive.jpg?raw=true">
-
-Dark mode looks like this:
-
-<img width="640px" src="https://github.com/the-mvm/the-mvm.github.io/blob/main/assets/img/template_screenshots/homepage-dark.png?raw=true">
-
-<img width="640px" src="https://github.com/the-mvm/the-mvm.github.io/blob/main/assets/img/template_screenshots/post-dark.png?raw=true">
-<img width="640px" src="https://github.com/the-mvm/the-mvm.github.io/blob/main/assets/img/template_screenshots/post_bottom-dark.png?raw=true">
-
-# Installation
-
-## Local Installation
-
-For a full local installation of Adam Blog 2.0, [download your own copy of Adam Blog 2.0](https://github.com/the-mvm/the-mvm.github.io/archive/refs/heads/main.zip) and unzip it into it's own directory. From there, open up your favorite command line tool, enter `bundle install`, and then enter `jekyll serve`. Your site should be up and running locally at [http://localhost:4000](http://localhost:4000).
-
-If you're completely new to Jekyll, I recommend checking out the documentation at <https://jekyllrb.com/> or there's a tutorial by [Smashing Magazine](https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/).
-
-If you are hosting your site on GitHub Pages, then committing a change to the `_config.yml` file (or any other file) will force a rebuild of your site with Jekyll. Any changes made should be viewable soon after. If you are hosting your site locally, then you must run `jekyll serve` again for the changes to take place.
-
-Head over to the `_posts` directory to view all the posts that are currently on the website, and to see examples of what post files generally look like. You can simply just duplicate the template post and start adding your own content.
-
-## GitHub Pages Installation
-
-### **STEP 1.**
-[Fork this repository](https://github.com/the-mvm/the-mvm.github.io/fork/) into your own account.
-
-#### Using Github Pages
-
-You can host your Jekyll site for free with Github Pages. [Click here](https://pages.github.com/) for more information.
-
- When forking, if you use as destination a repository named ``USERNAME.github.io`` then your url will be ``https://USERNAME.github.io/``, else ``https://USERNAME.github.io/REPONAME/``) and your site will be published to the gh-pages branch. Note: if you are hosting several sites under the same GitHub username, then you will have to use [Project Pages instead of User Pages](https://help.github.com/articles/user-organization-and-project-pages/) - just change the repository name to something other than 'http://USERNAME.github.io'.
-
-##### A configuration tweak if you're using a gh-pages branch
-
-In addition to your github-username.github.io repo that maps to the root url, you can serve up sites by using a gh-pages branch for other repos so they're available at github-username.github.io/repo-name.
-
-This will require you to modify the `_config.yml` like so:
-
-```yml
-# Site settings
-title: Repo Name
-email: your_email@example.com
-author: Your Name
-description: "Repo description"
-baseurl: "/repo-name"
-url: "https://github-username.github.io"
-```
-
-This will ensure that the the correct relative path is constructed for your assets and posts.
-
-### **STEP 2.**
-Modify ``_config.yml`` file, located in the root directory, with your data.
-
-```YAML
-# Site settings
-title: The Title for Your Website
-description: 'A description of your blog'
-permalink: ':title:output_ext' # how the permalinks will behave
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-logo: "" # the logo for your site
-logo-icon: "" # a smaller logo, typically squared
-logo-icon-SEO: "" # must be a non SVG file, could be the same as the logo-icon
-
-# Night/Dark mode default mode is "auto", "auto" is for auto nightshift (19:00 - 07:00), "manual" is for manual toggle, and "on/off" is for default on/off. Whatever the user's choice is, it will supersede the default setting of the site and be kept during the visit (session). Only the dark mode setting is "manual", it will be always kept on every visit (i.e. no matter the browser is closed or not)
-night_mode: "auto"
-logo-dark: "/assets/img/branding/MVM-logo-full-dark.svg" #if you want to display a different logo when in dark mode
-highlight_theme: syntax-base16.monokai.dark # select a dark theme for the code highlighter if needed
-
-
-# Author settings
-author: Your Name # add your name
-author-pic: '' # a picture of you
-about-author: '' # a brief description of you
-
-# Contact links
-email: your@email.com # Add your Email address
-phone: # Add your Phone number
-website:  # Add your website
-linkedin:  # Add your Linkedin handle
-github:  # Add your Github handle
-twitter:  # Add your Twitter handle
-bandcamp:  # Add your Bandcamp username
-
-# Tracker
-analytics: # Google Analytics tag ID
-fbadmin: # Facebook ID admin
-
-# Paginate
-paginate: 6 # number of items to show in the main page
-paginate_path: 'page:num'
-words_per_minute: 200 # default words per minute to be considered when calculating the read time of the blog posts
-```
-### **STEP 3.**
-To configure the newsletter, please create an account in https://mailchimp.com, set up a web signup form and paste the link from the embed signup form in the `config.yml` file:
-```YAML
-# Newsletter
-mailchimp: "https://github.us1.list-manage.com/subscribe/post?u=8ece198b3eb260e6838461a60&amp;id=397d90b5f4"
-```
-
-### **STEP 4.**
-To configure Disqus, set up a [Disqus site](https://disqus.com/admin/create/) with the same name as your site. Then, in `_config.yml`, edit the `disqus_identifier` value to enable.
-```YAML
-# Disqus
-discus_identifier:  # Add your discus identifier
-comments_curtain: yes # leave empty to show the disqus embed directly
-```
-More information on [how to set up Disqus](http://www.perfectlyrandom.org/2014/06/29/adding-disqus-to-your-jekyll-powered-github-pages/).
-
-### **STEP 5.**
-Customize the site colors. Modify `/assets/css/main.css` as follows:
-```CSS
-html {
-  --shadow:       rgba(32,30,30,.3);
-  --accent:       #DB504A;    /* accent */
-  --accent-dark:  #4e3e51;    /* accent 2 (dark) */
-  --main:         #326273;    /* main color */
-  --main-dim:     #879dab;    /* dimmed version of main color */
-  --text:         #201E1E;
-  --grey1:        #5F5E58;
-  --grey2:        #8D897C;
-  --grey3:        #B4B3A7;
-  --grey4:        #DAD7D2;
-  --grey5:        #F0EFED;
-  --background:   #ffffff;
-}
-
-html[data-theme="dark"]  {
-  --accent:       #d14c47;    /* accent */
-  --accent-dark:  #CD8A7A;    /* accent 2 (dark) */
-  --main:         #4C6567;    /* main color */
-  --main-dim:     #273335;    /* dimmed version of main color */
-  --text:         #B4B3A7;
-  --grey1:        #8D897C;
-  --grey2:        #827F73;
-  --grey3:        #76746A;
-  --grey4:        #66645D;
-  --grey5:        #4A4945;
-  --background:   #201E1E;
-  --shadow:       rgba(180,179,167,.3);
-}
-```
-### **STEP 6.**
-Customize the site fonts. Modify `/assets/css/main.css` as follows:
-```CSS
-...
-  --font1: 'Lora', charter, Georgia, Cambria, 'Times New Roman', Times, serif;/* body text */
-  --font2: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* headers and titles   */
-  --font1-light:      400;
-  --font1-regular:    400;
-  --font1-bold:       600;
-  --font2-light:      200;
-  --font2-regular:    400;
-  --font2-bold:       700;
-...
-```
-If you change the fonts, you need to also modify `/_includes/head.html` as follows:
-Uncomment and change the following line with your new fonts and font weights:
-```HTML
-<link href="https://fonts.googleapis.com/css?family=Lora:400,600|Source+Sans+Pro:200,400,700" rel="stylesheet">
-```
-Delete everything within `<style></style>` just before the line above:
-```HTML
-<style>
-/* latin */
-@font-face {
-  font-family: 'Lora';
-  ...
-</style>
-```
-
-### **STEP 7.**
-
-You will find example posts in your `/_posts/` directory. Go ahead and edit any post and re-build the site to see your changes, for github pages, this happens automatically with every commit. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-
-To add new posts, simply add a file in the `_posts` directory that follows the convention of `YYYY-MM-DD-name-of-post.md` and includes the necessary front matter. Take a look at any sample post to get an idea about how it works. If you already have a website built with Jekyll, simply copy over your posts to migrate to Adam Blog 2.0.
-
-The front matter options for each post are:
-```YAML
 ---
-layout: post #ensure this one stays like this
-read_time: true # calculate and show read time based on number of words
-show_date: true # show the date of the post
-title:  Your Blog Post Title
-date:   XXXX-XX-XX XX:XX:XX XXXX
-description: "The description of your blog post"
-img: # the path for the hero image, from the image folder (if the image is directly on the image folder, just the filename is needed)
-tags: [tags, of, your, post]
-author: Your Name
-github: username/reponame/ # set this to show a github button on the post
-toc: yes # leave empty or erase for no table of contents
----
-```
-Edit your blogpost using markdown. [Here is a good guide about how to use it.](https://www.markdownguide.org/)
 
-### **STEP 7.**
-Delete images inside of ``/assets/img/posts/`` and upload your own images for your posts.
+[![deploy](https://github.com/alshedivat/al-folio/actions/workflows/deploy.yml/badge.svg)](https://github.com/alshedivat/al-folio/actions/workflows/deploy.yml)
+[![Maintainers](https://img.shields.io/badge/maintainers-4-success.svg)](#maintainers)
+[![GitHub contributors](https://img.shields.io/github/contributors/alshedivat/al-folio.svg)](https://github.com/alshedivat/al-folio/graphs/contributors/)
+[![Docker Image Version](https://img.shields.io/docker/v/amirpourmand/al-folio?sort=semver&label=docker%20image&color=blueviolet)](https://hub.docker.com/r/amirpourmand/al-folio)
+[![Docker Image Size](https://img.shields.io/docker/image-size/amirpourmand/al-folio?sort=date&label=docker%20image%20size&color=blueviolet)](https://hub.docker.com/r/amirpourmand/al-folio)
+[![Docker Pulls](https://img.shields.io/docker/pulls/amirpourmand/al-folio?color=blueviolet)](https://hub.docker.com/r/amirpourmand/al-folio)
 
-### **STEP 8.**
-Make sure Github Pages are turned on in the repository settings, and pointing to the main or master branch (where you cloned this repo).
+[![GitHub release](https://img.shields.io/github/v/release/alshedivat/al-folio)](https://github.com/alshedivat/al-folio/releases/latest)
+[![GitHub license](https://img.shields.io/github/license/alshedivat/al-folio?color=blue)](https://github.com/alshedivat/al-folio/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/alshedivat/al-folio)](https://github.com/alshedivat/al-folio/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/alshedivat/al-folio)](https://github.com/alshedivat/al-folio/fork)
 
-## Additional documentation
+</div>
 
-### Directory Structure
+## User community
 
-If you are familiar with Jekyll, then the Adam Blog 2.0 directory structure shouldn't be too difficult to navigate. The following some highlights of the differences you might notice between the default directory structure. More information on what these folders and files do can be found in the [Jekyll documentation site](https://jekyllrb.com/docs/structure/).
+The vibrant community of **al-folio** users is growing!
+Academics around the world use this theme for their homepages, blogs, lab pages, as well as webpages for courses, workshops, conferences, meetups, and more.
+Check out the community webpages below.
+Feel free to add your own page(s) by sending a PR.
 
-```bash
-Adam Blog 2.0/
-├── _includes                  # Theme includes
-├── _layouts                   # Theme layouts (see below for details)
-├── _posts                     # Where all your posts will go
-├── assets                     # Style sheets and images are found here
-|  ├── css                     # Style sheets go here
-|  |  └── _sass                # Folder containing SCSS files
-|  |  └── main.css             # Main SCSS file
-|  |  └── highlighter          # Style sheet for code syntax highlighting
-|  └── img                     # 
-|     └── posts                # Images go here
-├── _pages                     # Website pages (that are not posts)
-├── _config.yml                # Site settings
-├── Gemfile                    # Ruby Gemfile for managing Jekyll plugins
-├── index.html                 # Home page
-├── LICENSE.md                 # License for this theme
-├── README.md                  # Includes all of the documentation for this theme
-├── feed.xml                   # Generates atom file which Jekyll points to
-├── 404.html                   # custom and responsive 404 page
-├── all-posts.json             # database of all posts used for infinite scroll
-├── ipfs-404.html              # 404 page for IPFS
-├── posts-by-tag.json          # database of posts by tag
-├── robots.txt                 # SEO crawlers exclusion file
-├── search.json                # database of posts used for search
-└── sitemap.xml                # automatically generated sitemap for search engines
-```
+<table>
+<tr>
+<td>Academics</td>
+<td>
+<a href="https://martinbulla.github.io" target="_blank">★</a>
+<a href="https://maruan.alshedivat.com" target="_blank">★</a>
+<a href="https://www.cs.columbia.edu/~chen1ru/" target="_blank">★</a>
+<a href="https://maithraraghu.com" target="_blank">★</a>
+<a href="https://platanios.org" target="_blank">★</a>
+<a href="https://otiliastr.github.io" target="_blank">★</a>
+<a href="https://www.maths.dur.ac.uk/~sxwc62/" target="_blank">★</a>
+<a href="https://jessachandler.com/" target="_blank">★</a>
+<a href="https://mayankm96.github.io/" target="_blank">★</a>
+<a href="https://markdean.info/" target="_blank">★</a>
+<a href="https://kakodkar.github.io/" target="_blank">★</a>
+<a href="https://sahirbhatnagar.com/" target="_blank">★</a>
+<a href="https://spd.gr/" target="_blank">★</a>
+<a href="https://jay-sarkar.github.io/" target="_blank">★</a>
+<a href="https://aborowska.github.io/" target="_blank">★</a>
+<a href="https://aditisgh.github.io/" target="_blank">★</a>
+<a href="https://alexhaydock.co.uk/" target="_blank">★</a>
+<a href="https://alixkeener.net/" target="_blank">★</a>
+<a href="https://andreea7b.github.io/" target="_blank">★</a>
+<a href="https://rishabhjoshi.github.io/" target="_blank">★</a>
+<a href="https://sheelabhadra.github.io/" target="_blank">★</a>
+<a href="https://giograno.me/" target="_blank">★</a>
+<a href="https://immsrini.github.io/" target="_blank">★</a>
+<a href="https://apooladian.github.io/" target="_blank">★</a>
+<a href="https://chinmoy-dutta.github.io/" target="_blank">★</a>
+<a href="https://liamcli.com/" target="_blank">★</a>
+<a href="https://yoonholee.com/" target="_blank">★</a>
+<a href="https://zrqiao.github.io/" target="_blank">★</a>
+<a href="https://abstractgeek.github.io/" target="_blank">★</a>
+<a href="https://www.compphys.de/" target="_blank">★</a>
+<a href="https://julianstreyczek.github.io" target="_blank">★</a>
+<a href="https://sdaza.com" target="_blank">★</a>
+<a href="https://niweera.gq" target="_blank">★</a>
+<a href="https://www.alihkw.com" target="_blank">★</a>
+<a href="https://amirpourmand.ir" target="_blank">★</a>
+<a href="https://scottleechua.github.io" target="_blank">★</a>
+<a href="https://sk1y101.github.io" target="_blank">★</a>
+<a href="https://yyang768osu.github.io" target="_blank">★</a>
+<a href="https://veedata.github.io" target="_blank">★</a>
+<a href="https://K-Wu.github.io" target="_blank">★</a>
+<a href="https://amalawilson.com" target="_blank">★</a>
+<a href="https://tirtharajdash.github.io" target="_blank">★</a>
+<a href="https://carolinacarreira.github.io" target="_blank">★</a>
+<a href="https://manandey.github.io" target="_blank">★</a>
+<a href="https://johanneshoerner.github.io" target="_blank">★</a>
+<a href="https://ioannismavromatis.com" target="_blank">★</a>
+<a href="https://taidnguyen.github.io" target="_blank">★</a>
+<a href="https://lbugnon.github.io" target="_blank">★</a>
+<a href="https://joahannes.github.io" target="_blank">★</a>
+<a href="https://dominikstrb.github.io" target="_blank">★</a>
+<a href="https://tylerbarna.com" target="_blank">★</a>
+<a href="https://daviddmc.github.io/" target="_blank">★</a>
+<a href="https://andreaskuster.ch/" target="_blank">★</a>
+<a href="https://ellisbrown.github.io/" target="_blank">★</a>
+<a href="https://djherron.github.io/" target="_blank">★</a>
+<a href="https://rodosingh.github.io/" target="_blank">★</a>
+<a href="https://vdivakar.github.io/" target="_blank">★</a>
+<a href="https://george-gca.github.io/" target="_blank">★</a>
+<a href="https://bashirkazimi.github.io/" target="_blank">★</a>
+<a href="https://dohaison.github.io/" target="_blank">★</a>
+<a href="https://raphaaal.github.io/" target="_blank">★</a>
+<a href="https://varuniyer.info/" target="_blank">★</a>
+<a href="https://yukimasano.github.io/" target="_blank">★</a>
+<a href="https://hashe037.github.io/" target="_blank">★</a>
+<a href="https://wang-boyu.github.io/" target="_blank">★</a>
+<a href="https://qingqingchen.info" target="_blank">★</a>
+<a href="https://bajinsheng.github.io/" target="_blank">★</a>
+<a href="https://www.silviofanzon.com/" target="_blank">★</a>
+<a href="https://kaikaiyao.github.io/" target="_blank">★</a>
+<a href="https://alchemz.github.io/" target="_blank">★</a>
+<a href="https://samadamday.com/" target="_blank">★</a>
+<a href="https://fanpu.io/" target="_blank">★</a>
+<a href="https://abigalekim.github.io/" target="_blank">★</a>
+<a href="https://lucasresck.github.io/" target="_blank">★</a>
+<a href="https://users.wpi.edu/~lfichera/" target="_blank">★</a>
+<a href="https://anmspro.github.io/" target="_blank">★</a>
+<a href="https://berlyne.net/" target="_blank">★</a>
+<a href="https://filippomazzoli.github.io/" target="_blank">★</a>
+<a href="https://www.escontrela.me/" target="_blank">★</a>
+<a href="https://raffaem.github.io/" target="_blank">★</a>
+<a href="https://cbueth.de/" target="_blank">★</a>
+<a href="https://kyleaoman.github.io/" target="_blank">★</a>
+<a href="https://decwest.github.io/" target="_blank">★</a>
+<a href="https://www.jedburkat.com" target="_blank">★</a>
+<a href="https://hrzhang.me" target="_blank">★</a>
+<a href="https://kudhru.github.io/" target="_blank">★</a>
+<a href="https://mbarbetti.github.io/" target="_blank">★</a>
+<a href="https://www.zhivotenko.com/" target="_blank">★</a>
+<a href="https://giordanodaloisio.github.io/" target="_blank">★</a>
+<a href="https://aadityaura.github.io/" target="_blank">★</a>
+<a href="https://abhinav-mehta.github.io/" target="_blank">★</a>
+<a href="https://shubhashisroydipta.com/" target="_blank">★</a>
+<a href="https://astanziola.github.io" target="_blank">★</a>
+<a href="https://tinkerer.in" target="_blank">★</a>
+<a href="https://sam-bieberich.github.io/" target="_blank">★</a>
+<a href="https://afraniomelo.github.io/en/" target="_blank">★</a>
+<a href="https://jonaruthardt.github.io" target="_blank">★</a>
+<a href="https://www.zla.app/" target="_blank">★</a>
+<a href="https://stavros.github.io" target="_blank">★</a>
+<a href="https://ericslyman.com" target="_blank">★</a>
+<a href="https://ztjona.github.io/" target="_blank">★</a>
+<a href="https://chrischoi314.github.io" target="_blank">★</a>
+<a href="https://riccobelli.faculty.polimi.it" target="_blank">★</a>
+<a href="https://kishanved.tech/" target="_blank">★</a>
+<a href="https://abhilesh.github.io/" target="_blank">★</a>
+<a href="https://jackjburnett.github.io/" target="_blank">★</a>
+<a href="https://physics-morris.github.io/" target="_blank">★</a>
+<a href="https://sraf.ir" target="_blank">★</a>
+<a href="https://acad.garywei.dev/" target="_blank">★</a>
+<a href="https://tonideleo.github.io/" target="_blank">★</a>
+<a href="https://alonkellner.com/" target="_blank">★</a>
+<a href="https://berylbir.github.io/" target="_blank">★</a>
+<a href="https://global-anomaly.github.io/" target="_blank">★</a>
+<a href="https://mingsun-kaust.github.io/" target="_blank">★</a>
+<a href="https://hdocmsu.github.io/" target="_blank">★</a>
+<a href="https://trandangtrungduc.github.io/" target="_blank">★</a>
+<a href="https://kinghowler.github.io/" target="_blank">★</a>
+<a href="https://anurye.github.io/" target="_blank">★</a>
+<a href="https://charlie-xiao.github.io/" target="_blank">★</a>
+<a href="https://giuseppeperelli.github.io/" target="_blank">★</a>
+<a href="https://shlee-lab.github.io/" target="_blank">★</a>
+<a href="https://devos50.github.io/" target="_blank">★</a>
+<a href="https://vmooers.github.io/" target="_blank">★</a>
+<a href="https://jpfonseca.github.io/" target="_blank">★</a>
+<a href="https://dmitryryumin.github.io/" target="_blank">★</a>
+<a href="https://alexiglad.github.io/" target="_blank">★</a>
+<a href="https://nishanthjkumar.com/" target="_blank">★</a>
+<a href="https://joszuijderwijk.nl/" target="_blank">★</a>
+<a href="https://d-jiao.github.io/" target="_blank">★</a>
+<a href="https://cbuelt.github.io/" target="_blank">★</a>
+<a href="https://mehrdad-noori.github.io/" target="_blank">★</a>
+<a href="https://arthurclerjon.github.io/" target="_blank">★</a>
+<a href="https://eilamshapira.com/" target="_blank">★</a>
+<a href="https://freifrauvonbleifrei.github.io/" target="_blank">★</a>
+<a href="https://thomasbourke1.github.io/" target="_blank">★</a>
+<a href="https://siddharthsule.com/" target="_blank">★</a>
+<a href="https://waynexucn.github.io/" target="_blank">★</a>
+<a href="https://zlatanajanovic.com/" target="_blank">★</a>
+</td>
+</tr>
+<tr>
+<td>Labs</td>
+<td>
+<a href="https://www.haylab.caltech.edu/" target="_blank">★</a>
+<a href="https://sjkimlab.github.io/" target="_blank">★</a>
+<a href="https://systemconsultantgroup.github.io/scg-folio/" target="_blank">★</a>
+<a href="https://decisionlab.ucsf.edu/" target="_blank">★</a>
+<a href="https://programming-group.com/" target="_blank">★</a>
+<a href="https://sailing-lab.github.io/" target="_blank">★</a>
+<a href="https://inbt.jhu.edu/epidiagnostics/" target="_blank">★</a>
+<a href="https://www.nuesl.org/" target="_blank">★</a>
+<a href="https://big-culture.github.io/" target="_blank">★</a>
+<a href="https://martinbulla.github.io/bullab/" target="_blank">★</a>  
+<a href="https://gpforesteyes.github.io/" target="_blank">★</a>
+</td>
+</tr>
+<tr>
+<td>Courses</td>
+<td>
+CMU PGM (<a href="https://sailinglab.github.io/pgm-spring-2019/" target="_blank">S-19</a>) <br>
+CMU DeepRL (<a href="https://cmudeeprl.github.io/403_website/" target="_blank">S-21</a>, <a href="https://cmudeeprl.github.io/703website_f21/" target="_blank">F-21</a>, <a href="https://cmudeeprl.github.io/403website_s22/" target="_blank">S-22</a>, <a href="https://cmudeeprl.github.io/703website_f22/" target="_blank">F-22</a>, <a href="https://cmudeeprl.github.io/403website_s23/" target="_blank">S-23</a>, <a href="https://cmudeeprl.github.io/703website_f23/" target="_blank">F-23</a>) <br>
+CMU MMML (<a href="https://cmu-multicomp-lab.github.io/mmml-course/fall2020/" target="_blank">F-20</a>, <a href="https://cmu-multicomp-lab.github.io/mmml-course/fall2022/" target="_blank">F-22</a>) <br>
+CMU AMMML (<a href="https://cmu-multicomp-lab.github.io/adv-mmml-course/spring2022/" target="_blank">S-22</a>, <a href="https://cmu-multicomp-lab.github.io/adv-mmml-course/spring2023/" target="_blank">S-23</a>) <br>
+CMU ASI (<a href="https://cmu-multicomp-lab.github.io/asi-course/spring2023/" target="_blank">S-23</a>) <br>
+CMU Distributed Systems (<a href="https://andrew.cmu.edu/course/15-440/" target="_blank">S-24</a>)
+</td>
+</tr>
+<tr>
+<td>Conferences & workshops</td>
+<td>
+ICLR Blog Post Track (<a href="https://iclr-blogposts.github.io/2023/" target="_blank">2023</a>, <a href="https://iclr-blogposts.github.io/2024/about" target="_blank">2024</a>) <br>
+ML Retrospectives (NeurIPS: <a href="https://ml-retrospectives.github.io/neurips2019/" target="_blank">2019</a>, <a href="https://ml-retrospectives.github.io/neurips2020/" target="_blank">2020</a>; ICML: <a href="https://ml-retrospectives.github.io/icml2020/" target="_blank">2020</a>) <br>
+HAMLETS (NeurIPS: <a href="https://hamlets-workshop.github.io/" target="_blank">2020</a>) <br>
+ICBINB (NeurIPS: <a href="https://i-cant-believe-its-not-better.github.io/" target="_blank">2020</a>, <a href="https://i-cant-believe-its-not-better.github.io/neurips2021/" target="_blank">2021</a>) <br>
+Neural Compression (ICLR: <a href="https://neuralcompression.github.io/" target="_blank">2021</a>) <br>
+Score Based Methods (NeurIPS: <a href="https://score-based-methods-workshop.github.io/" target="_blank">2022</a>)<br>
+Images2Symbols (CogSci: <a href="https://images2symbols.github.io/" target="_blank"> 2022</a>) <br>
+Medical Robotics Junior Faculty Forum (ISMR: <a href="https://junior-forum-ismr.github.io/" target="_blank"> 2023</a>)<br>
+Beyond Vision: Physics meets AI (ICIAP: <a href="https://physicsmeetsai.github.io/beyond-vision/" target="_blank">2023</a>) <br>
+Workshop on Diffusion Models (NeurIPS: <a href="https://diffusionworkshop.github.io/" target="_blank">2023</a>) <br>
+Workshop on Structured Probabilistic Inference & Generative Modeling (ICML: <a href="https://spigmworkshop.github.io/" target="_blank">2023</a>, <a href="https://spigmworkshop2024.github.io/" target="_blank">2024</a>)
+</td>
+</tr>
+</table>
 
-### Starting From Scratch
+## Lighthouse PageSpeed Insights
 
-To completely start from scratch, simply delete all the files in the `_posts`, `assets/img/posts` folders, and add your own content. Everything in the `_config.yml` file can be edited to suit your needs. Also change the `favicon.ico` file to your own favicon.
+### Desktop
 
-### Click to tweet
+[![Google Lighthouse PageSpeed Insights](lighthouse_results/desktop/pagespeed.svg)](https://htmlpreview.github.io/?https://github.com/alshedivat/al-folio/blob/main/lighthouse_results/desktop/alshedivat_github_io_al_folio_.html)
 
-If you have a tweetable quote in your blog post and wish to feature it as a click to tweet block, you just have to use the `<tweet></tweet>` tags, everything between them will be converted in a click to tweet box.
+Run the test yourself: [Google Lighthouse PageSpeed Insights](https://pagespeed.web.dev/report?url=https%3A%2F%2Falshedivat.github.io%2Fal-folio%2F&form_factor=desktop)
 
-<img width="640px" src="https://github.com/the-mvm/the-mvm.github.io/blob/main/assets/img/template_screenshots/ctt-markdown.png?raw=true">
+### Mobile
 
-<img width="640px" src="https://github.com/the-mvm/the-mvm.github.io/blob/main/assets/img/template_screenshots/ctt-render.png?raw=true">
+[![Google Lighthouse PageSpeed Insights](lighthouse_results/mobile/pagespeed.svg)](https://htmlpreview.github.io/?https://github.com/alshedivat/al-folio/blob/main/lighthouse_results/mobile/alshedivat_github_io_al_folio_.html)
 
-### Google Analytics
+Run the test yourself: [Google Lighthouse PageSpeed Insights](https://pagespeed.web.dev/report?url=https%3A%2F%2Falshedivat.github.io%2Fal-folio%2F&form_factor=mobile)
 
-It is possible to track your site statistics through [Google Analytics](https://www.google.com/analytics/). Similar to Disqus, you will have to create an account for Google Analytics, and enter the correct Google ID for your site under `google-ID` in the `_config.yml` file. More information on [how to set up Google Analytics](https://michaelsoolee.com/google-analytics-jekyll/).
+## Table Of Contents
 
-### Atom Feed
+<!--ts-->
 
-Atom is supported by default through [jekyll-feed](https://github.com/jekyll/jekyll-feed). With jekyll-feed, you can set configuration variables such as 'title', 'description', and 'author', in the `_config.yml` file.
+- [al-folio](#al-folio)
+  - [User community](#user-community)
+  - [Lighthouse PageSpeed Insights](#lighthouse-pagespeed-insights)
+    - [Desktop](#desktop)
+    - [Mobile](#mobile)
+  - [Table Of Contents](#table-of-contents)
+  - [Getting started](#getting-started)
+  - [Installing and Deploying](#installing-and-deploying)
+  - [Customizing](#customizing)
+  - [Features](#features)
+    - [Light/Dark Mode](#lightdark-mode)
+    - [CV](#cv)
+    - [People](#people)
+    - [Publications](#publications)
+    - [Collections](#collections)
+    - [Layouts](#layouts)
+      - [The iconic style of Distill](#the-iconic-style-of-distill)
+      - [Full support for math &amp; code](#full-support-for-math--code)
+      - [Photos, Audio, Video and more](#photos-audio-video-and-more)
+    - [Other features](#other-features)
+      - [GitHub's repositories and user stats](#githubs-repositories-and-user-stats)
+      - [Theming](#theming)
+      - [Social media previews](#social-media-previews)
+      - [Atom (RSS-like) Feed](#atom-rss-like-feed)
+      - [Related posts](#related-posts)
+      - [Code quality checks](#code-quality-checks)
+  - [FAQ](#faq)
+  - [Contributing](#contributing)
+    - [Maintainers](#maintainers)
+    - [All Contributors](#all-contributors)
+  - [Star History](#star-history)
+  - [License](#license)
+  <!--te-->
 
-Your atom feed file will be live at `https://your.site/feed.xml` [example](https://the-mvm.github.io/feed.xml).
+## Getting started
 
-### Social Media Icons
+Want to learn more about Jekyll? Check out [this tutorial](https://www.taniarascia.com/make-a-static-website-with-jekyll/). Why Jekyll? Read [Andrej Karpathy's blog post](https://karpathy.github.io/2014/07/01/switching-to-jekyll/)! Why write a blog? Read [Rachel Thomas blog post](https://medium.com/@racheltho/why-you-yes-you-should-blog-7d2544ac1045).
 
-All social media icons are courtesy of [Font Awesome](http://fontawesome.io/). You can change which icons appear, as well as the account that they link to, in the `_config.yml` file.
+## Installing and Deploying
 
-### MathJax
+For installation and deployment details please refer to [INSTALL.md](INSTALL.md).
 
-Adam Blog 2.0 comes out of the box with [MathJax](https://www.mathjax.org/), which allows you to display mathematical equations in your posts through the use of [LaTeX](http://www.andy-roberts.net/writing/latex/mathematics_1). Just add `Mathjax: yes` in the frontmatter of your post.
+## Customizing
 
-```markdown
-<p style="text-align:center">
-\(\theta_{t+1} = \theta_{t} - \dfrac{\eta}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t\).
+For customization details please refer to [CUSTOMIZE.md](CUSTOMIZE.md).
+
+## Features
+
+### Light/Dark Mode
+
+This template has a built-in light/dark mode. It detects the user preferred color scheme and automatically switches to it. You can also manually switch between light and dark mode by clicking on the sun/moon icon in the top right corner of the page.
+
+<p align="center">
+<img src="readme_preview/light.png" width=400>
+<img src="readme_preview/dark.png" width=400>
 </p>
+
+---
+
+### CV
+
+There are currently 2 different ways of generating the CV page content. The first one is by using a json file located in [assets/json/resume.json](assets/json/resume.json). It is a [known standard](https://jsonresume.org/) for creating a CV programmatically. The second one, currently used as a fallback when the json file is not found, is by using a yml file located in [\_data/cv.yml](_data/cv.yml). This was the original way of creating the CV page content and since it is more human readable than a json file we decided to keep it as an option.
+
+What this means is, if there is no resume data defined in [\_config.yml](_config.yml) and loaded via a json file, it will load the contents of [\_data/cv.yml](_data/cv.yml) as fallback.
+
+[![CV Preview](readme_preview/cv.png)](https://alshedivat.github.io/al-folio/cv/)
+
+---
+
+### People
+
+You can create a people page if you want to feature more than one person. Each person can have its own short bio, profile picture, and you can also set if every person will appear at the same or opposite sides.
+
+[![People Preview](readme_preview/people.png)](https://alshedivat.github.io/al-folio/people/)
+
+---
+
+### Publications
+
+Your publications' page is generated automatically from your BibTex bibliography. Simply edit [\_bibliography/papers.bib](_bibliography/papers.bib). You can also add new `*.bib` files and customize the look of your publications however you like by editing [\_pages/publications.md](_pages/publications.md). By default, the publications will be sorted by year and the most recent will be displayed first. You can change this behavior and more in the `Jekyll Scholar` section in [\_config.yml](_config.yml) file.
+
+You can add extra information to a publication, like a PDF file in the [assets/pdf/](assets/pdf/) directory and add the path to the PDF file in the BibTeX entry with the `pdf` field. Some of the supported fields are: `abstract`, `altmetric`, `arxiv`, `bibtex_show`, `blog`, `code`, `dimensions`, `doi`, `eprint`, `html`, `isbn`, `pdf`, `pmid`, `poster`, `slides`, `supp`, `video`, and `website`.
+
+[![Publications Preview](readme_preview/publications.png)](https://alshedivat.github.io/al-folio/publications/)
+
+---
+
+### Collections
+
+This Jekyll theme implements `collections` to let you break up your work into categories. The theme comes with two default collections: `news` and `projects`. Items from the `news` collection are automatically displayed on the home page. Items from the `projects` collection are displayed on a responsive grid on projects page.
+
+[![Projects Preview](readme_preview/projects.png)](https://alshedivat.github.io/al-folio/projects/)
+
+You can easily create your own collections, apps, short stories, courses, or whatever your creative work is. To do this, edit the collections in the [\_config.yml](_config.yml) file, create a corresponding folder, and create a landing page for your collection, similar to `_pages/projects.md`.
+
+---
+
+### Layouts
+
+**al-folio** comes with stylish layouts for pages and blog posts.
+
+#### The iconic style of Distill
+
+The theme allows you to create blog posts in the [distill.pub](https://distill.pub/) style:
+
+[![Distill Preview](readme_preview/distill.png)](https://alshedivat.github.io/al-folio/blog/2021/distill/)
+
+For more details on how to create distill-styled posts using `<d-*>` tags, please refer to [the example](https://alshedivat.github.io/al-folio/blog/2021/distill/).
+
+#### Full support for math & code
+
+**al-folio** supports fast math typesetting through [MathJax](https://www.mathjax.org/) and code syntax highlighting using [GitHub style](https://github.com/jwarby/jekyll-pygments-themes). Also supports [chartjs charts](https://www.chartjs.org/), [mermaid diagrams](https://mermaid-js.github.io/mermaid/#/), and [TikZ figures](https://tikzjax.com/).
+
+<p align="center">
+<a href="https://alshedivat.github.io/al-folio/blog/2015/math/" target="_blank"><img src="readme_preview/math.png" width=400></a>
+<a href="https://alshedivat.github.io/al-folio/blog/2015/code/" target="_blank"><img src="readme_preview/code.png" width=400></a>
+</p>
+
+#### Photos, Audio, Video and more
+
+Photo formatting is made simple using [Bootstrap's grid system](https://getbootstrap.com/docs/4.4/layout/grid/). Easily create beautiful grids within your blog posts and project pages, also with support for [video](https://alshedivat.github.io/al-folio/blog/2023/videos/) and [audio](https://alshedivat.github.io/al-folio/blog/2023/audios/) embeds:
+
+<p align="center">
+  <a href="https://alshedivat.github.io/al-folio/projects/1_project/">
+    <img src="readme_preview/photos-screenshot.png" width="75%">
+  </a>
+</p>
+
+---
+
+### Other features
+
+#### GitHub's repositories and user stats
+
+**al-folio** uses [github-readme-stats](https://github.com/anuraghazra/github-readme-stats) and [github-profile-trophy](https://github.com/ryo-ma/github-profile-trophy) to display GitHub repositories and user stats on the `/repositories/` page.
+
+[![Repositories Preview](readme_preview/repositories.png)](https://alshedivat.github.io/al-folio/repositories/)
+
+Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories to the `/repositories/` page.
+
+You may also use the following codes for displaying this in any other pages.
+
+```html
+<!-- code for GitHub users -->
+{% if site.data.repositories.github_users %}
+<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+  {% for user in site.data.repositories.github_users %} {% include repository/repo_user.liquid username=user %} {% endfor %}
+</div>
+{% endif %}
+
+<!-- code for GitHub trophies -->
+{% if site.repo_trophies.enabled %} {% for user in site.data.repositories.github_users %} {% if site.data.repositories.github_users.size > 1 %}
+<h4>{{ user }}</h4>
+{% endif %}
+<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+  {% include repository/repo_trophies.liquid username=user %}
+</div>
+{% endfor %} {% endif %}
+
+<!-- code for GitHub repositories -->
+{% if site.data.repositories.github_repos %}
+<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+  {% for repo in site.data.repositories.github_repos %} {% include repository/repo.liquid repository=repo %} {% endfor %}
+</div>
+{% endif %}
 ```
-![rendered mathjax](/assets/img/template_screenshots/MathjaxRendered.jpg)
 
+---
 
-### Syntax Highlighting
+#### Theming
 
-Adam Blog 2.0 provides syntax highlighting through [fenced code blocks](https://help.github.com/articles/creating-and-highlighting-code-blocks/). Syntax highlighting allows you to display source code in different colors and fonts depending on what programming language is being displayed. You can find the full list of supported programming languages [here](https://github.com/jneen/rouge/wiki/List-of-supported-languages-and-lexers). Another option is to embed your code through [Gist](https://en.support.wordpress.com/gist/).
+A variety of beautiful theme colors have been selected for you to choose from. The default is purple, but you can quickly change it by editing the `--global-theme-color` variable in the `_sass/_themes.scss` file. Other color variables are listed there as well. The stock theme color options available can be found at [\_sass/\_variables.scss](_sass/_variables.scss). You can also add your own colors to this file assigning each a name for ease of use across the template.
 
-You can choose the color theme for the syntax highlight in the `_config.yml` file:
-```YAML
-highlight_theme: syntax-base16.monokai.dark # select a theme for the code highlighter
-```
-See the [highlighter directory](https://github.com/the-mvm/the-mvm.github.io/tree/main/assets/css/highlighter) for reference on the options.
+---
 
-### Markdown
+#### Social media previews
 
-Jekyll offers support for GitHub Flavored Markdown, which allows you to format your posts using the [Markdown syntax](https://guides.github.com/features/mastering-markdown/).
+**al-folio** supports preview images on social media. To enable this functionality you will need to set `serve_og_meta` to `true` in your [\_config.yml](_config.yml). Once you have done so, all your site's pages will include Open Graph data in the HTML head element.
 
-## Everything Else
+You will then need to configure what image to display in your site's social media previews. This can be configured on a per-page basis, by setting the `og_image` page variable. If for an individual page this variable is not set, then the theme will fall back to a site-wide `og_image` variable, configurable in your [\_config.yml](_config.yml). In both the page-specific and site-wide cases, the `og_image` variable needs to hold the URL for the image you wish to display in social media previews.
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+---
 
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+#### Atom (RSS-like) Feed
+
+It generates an Atom (RSS-like) feed of your posts, useful for Atom and RSS readers. The feed is reachable simply by typing after your homepage `/feed.xml`. E.g. assuming your website mountpoint is the main folder, you can type `yourusername.github.io/feed.xml`
+
+---
+
+#### Related posts
+
+By default, there will be a related posts section on the bottom of the blog posts. These are generated by selecting the `max_related` most recent posts that share at least `min_common_tags` tags with the current post. If you do not want to display related posts on a specific post, simply add `related_posts: false` to the front matter of the post. If you want to disable it for all posts, simply set `enabled` to false in the `related_blog_posts` section in [\_config.yml](_config.yml).
+
+---
+
+#### Code quality checks
+
+Currently, we run some checks to ensure that the code quality and generated site are good. The checks are done using GitHub Actions and the following tools:
+
+- [Prettier](https://prettier.io/) - check if the formatting of the code follows the style guide
+- [lychee](https://lychee.cli.rs/) - check for broken links
+- [Axe](https://github.com/dequelabs/axe-core) (need to run manually) - do some accessibility testing
+
+We decided to keep `Axe` runs manual because fixing the issues are not straightforward and might be hard for people without web development knowledge.
+
+## FAQ
+
+For frequently asked questions, please refer to [FAQ.md](FAQ.md).
 
 ## Contributing
 
-If you would like to make a feature request, or report a bug or typo in the documentation, then please [submit a GitHub issue](https://github.com/the-mvm/the-mvm.github.io/issues/new). If you would like to make a contribution, then feel free to [submit a pull request](https://help.github.com/articles/about-pull-requests/) - as a bonus, I will credit all contributors below! If this is your first pull request, it may be helpful to read up on the [GitHub Flow](https://guides.github.com/introduction/flow/) first.
+Contributions to al-folio are very welcome! Before you get started, please take a look at [the guidelines](CONTRIBUTING.md).
 
-Adam Blog 2.0 has been designed as a base for users to customize and fit to their own unique needs. Please keep this in mind when requesting features and/or submitting pull requests. Some examples of changes that I would love to see are things that would make the site easier to use, or better ways of doing things. Please avoid changes that do not benefit the majority of users.
+If you would like to improve documentation or fix a minor inconsistency or bug, please feel free to send a PR directly to `main`. For more complex issues/bugs or feature requests, please open an issue using the appropriate template.
 
-## Questions?
+### Maintainers
 
-This theme is completely free and open source software. You may use it however you want, as it is distributed under the [MIT License](http://choosealicense.com/licenses/mit/). If you are having any problems, any questions or suggestions, feel free to  [file a GitHub issue](https://github.com/the-mvm/the-mvm.github.io/issues/new).
+Our most active contributors are welcome to join the maintainers team. If you are interested, please reach out!
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://maruan.alshedivat.com"><img src="https://avatars.githubusercontent.com/u/2126561?v=4" width="100px;" alt=""/><br /><sub><b>Maruan</b></sub></a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://rohandebsarkar.github.io"><img src="https://avatars.githubusercontent.com/u/50144004?v=4" width="100px;" alt=""/><br /><sub><b>Rohan Deb Sarkar</b></sub></a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://amirpourmand.ir"><img src="https://avatars.githubusercontent.com/u/32064808?v=4" width="100px;" alt=""/><br /><sub><b>Amir Pourmand</b></sub></a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://george-gca.github.io/"><img src="https://avatars.githubusercontent.com/u/31376482?v=4" width="100px;" alt=""/><br /><sub><b>George</b></sub></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+### All Contributors
+
+<a href="https://contrib.rocks">
+  <img src="https://contrib.rocks/image?repo=alshedivat/al-folio&max=500&columns=24" />
+</a>
+
+## Star History
+
+<a href="https://star-history.com/#alshedivat/al-folio&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=alshedivat/al-folio&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=alshedivat/al-folio&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=alshedivat/al-folio&type=Date" />
+  </picture>
+</a>
+
+## License
+
+The theme is available as open source under the terms of the [MIT License](https://github.com/alshedivat/al-folio/blob/main/LICENSE).
+
+Originally, **al-folio** was based on the [\*folio theme](https://github.com/bogoli/-folio) (published by [Lia Bogoev](https://liabogoev.com) and under the MIT license). Since then, it got a full re-write of the styles and many additional cool features.
